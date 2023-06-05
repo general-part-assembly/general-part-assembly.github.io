@@ -29,12 +29,11 @@
 			<div id="main" style="padding-bottom:1em; padding-top: 5em; width: 60em; max-width: 70em; margin-left: auto; margin-right: auto;">
 					<section id="four">
 						
-						
 
 						<h1 style="text-align: center; margin-bottom: 0;"><font color="4e79a7">General Part Assembly Planning</font> </h1>
 
 						<div style="text-align: center; margin-top: 1em">
-							<img src="figs/teaser_new.pdf" style="width: 80%;" alt="header">
+							<img src="figs/teaser_new.pdf" style="width: 80%;" alt="teaser">
 						</div>
 
 						<!-- <h2 style="text-align: center; white-space: nowrap;">subtitle</h2> -->
@@ -45,7 +44,7 @@
 						
 
 						<!-- <div style="display: flex; justify-content: space-between;">
-							<img src="figs/table_animate.gif" style="width: 50%;" alt="teaser_table">
+							<img src="figs/table_animate.gif" style="width: 50%;" alt="table">
 							<img src="figs/teaser.gif" style="width: 50%;" alt="teaser">
 						</div>
 						 -->
@@ -68,7 +67,7 @@
 				        <h3>General Part Assembly Transformer (GPAT)</h3>
 						We tackle the problem of general part assembly by target segmentation followed with pose estimation. To predict accurate segmentation of the target, a key challenge is to deal with the ambiguities in the target shape due to geometrically equivalent parts (e.g., legs of a table). To infer accurate segmentations, we propose General Part Assembly Transformer (GPAT), a transformer-based model architecture, that processes input shapes in a fine-to-coarse manner, thereby ensuring consistent segmentation results. 
 						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/method.pdf" style="max-width: 100%;" alt="General Part Assembly Transformer (GPAT)">
+						<img src="figs/method.pdf" style="max-width: 100%;" alt="method">
 						</div> -->
 
 						<hr/ style="margin-top: 1em">
@@ -106,7 +105,7 @@
 						o fully test the generalization abilities of GPAT, we provide unseen part shapes like a banana, hammers, and forks as parts to create novel targets such as a plane. Our model predicts creative assemblies given target shapes from unseen categories and non-exact parts, as seen in Fig. 1. 
 						<!-- The shapes are taken from PartNet, ModelNet40, and YCB dataset. -->
 						<div style="text-align: center; margin-top: 1em">
-							<img src="figs/header.jpg" style="width: 70%;" alt="header">
+							<img src="figs/teaser_head.jpg" style="width: 70%;" alt="teaser_head">
 							<img src="figs/teaser.gif" style="width: 70%;" alt="teaser">
 						</div>
 						
@@ -114,7 +113,7 @@
 						<h3>Sensitivity to Scale</h3>
 						Part assembly often involves parts that have the same geometry but different scales, so it is necessary for a model to discriminate parts of different scales to create correct assemblies.  As an qualitative illustration in the figure below, we adjust the scale of the parts that have same geometry (the legs of chair/table), and the model correctly associates parts of different scales to the target to build the desired assemblies.
 						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/scale.pdf" style="width: 70%" alt="Application to Part Discovery">
+						<img src="figs/scale.pdf" style="width: 70%" alt="Sensitivity to Scale">
 						</div>
 
 						<hr/ style="margin-top: 1em">

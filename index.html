@@ -34,7 +34,7 @@
 						<h1 style="text-align: center; margin-bottom: 0;"><font color="4e79a7">General Part Assembly Planning</font> </h1>
 
 						<div style="text-align: center; margin-top: 1em">
-							<img src="figs/teaser_new.pdf" style="width: 80%;" alt="teaser">
+							<img src="figs/teaser_new.jpg" style="width: 80%;" alt="teaser">
 						</div>
 
 						<!-- <h2 style="text-align: center; white-space: nowrap;">subtitle</h2> -->
@@ -68,7 +68,7 @@
 				        <h3>General Part Assembly Transformer (GPAT)</h3>
 						We tackle the problem of general part assembly by target segmentation followed with pose estimation. To predict accurate segmentation of the target, a key challenge is to deal with the ambiguities in the target shape due to geometrically equivalent parts (e.g., legs of a table). To infer accurate segmentations, we propose General Part Assembly Transformer (GPAT), a transformer-based model architecture, that processes input shapes in a fine-to-coarse manner, thereby ensuring consistent segmentation results. 
 						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/method.pdf" style="max-width: 100%;" alt="method">
+						<img src="figs/method.jpg" style="max-width: 100%;" alt="method">
 						</div> -->
 
 						<hr/ style="margin-top: 1em">
@@ -77,14 +77,14 @@
 
 						
 						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/sup.pdf" style="width: 100%" alt="Results">
+						<img src="figs/sup.jpg" style="width: 100%" alt="Results">
 						</div>
 						
 						<hr/ style="margin-top: 1em">
 						<h3>Results with Real-world Scans as Targets</h3>
 						We use the real-world scans from <a href="http://redwood-data.org">redwood</a> dataset as targets and part point clouds from the same category of <a hred="https://partnet.cs.stanford.edu">PartNet</a>. As seen in Fig 6, our method produces diverse assemblies that resemble the target given different parts. This result also illustrates how GPAT can be used to assemble different sets of parts given the same target shape.
 						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/realworld_all_new.pdf" style="width: 100%" alt="Results with Real-world Scans">
+						<img src="figs/realworld_all_new.jpg" style="width: 100%" alt="Results with Real-world Scans">
 						</div>
 
 
@@ -92,13 +92,13 @@
 						<h3>Multi-scale Attention Layer</h3>
 						TF denotes an alternative segmentation-based model that uses the vanilla transformer, which fails to produce consistent segmentations for targets with geometrically equivalent parts. With the multi-scale attention layer, GPAT fully leverages the spatial structure of the target point clouds to produce consistent segmentations and accurate assemblies.
 						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/seg.pdf" style="width: 70%" alt="Results with Real-world Scans">
+						<img src="figs/seg.jpg" style="width: 70%" alt="Results with Real-world Scans">
 						</div> -->
 
 						<!-- <hr/ style="margin-top: 1em">
 						<h3>The Effect of Optimization</h3>
 						<div style="text-align: center;">
-						<img src="figs/opt.pdf" style="width: 100%" alt="The Effect of Optimization">
+						<img src="figs/opt.jpg" style="width: 100%" alt="The Effect of Optimization">
 						</div> -->
 						
 						<hr/ style="margin-top: 1em">
@@ -114,7 +114,7 @@
 						<h3>Sensitivity to Scale</h3>
 						Part assembly often involves parts that have the same geometry but different scales, so it is necessary for a model to discriminate parts of different scales to create correct assemblies.  As an qualitative illustration in the figure below, we adjust the scale of the parts that have same geometry (the legs of chair/table), and the model correctly associates parts of different scales to the target to build the desired assemblies.
 						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/scale.pdf" style="width: 70%" alt="Sensitivity to Scale">
+						<img src="figs/scale.jpg" style="width: 70%" alt="Sensitivity to Scale">
 						</div>
 
 						<hr/ style="margin-top: 1em">
@@ -124,7 +124,7 @@
 						Given non-exact parts, PAT predicts accurate segmentations as usual. If we input identical blocks, which specifies the number of parts but provides little information about the part shapes, then GPAT predicts reasonable segmentations with the specified number of segments. 
 						Finally, we omit the input parts, and GPAT successfully discovers parts in the target shape.
 						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/feature.pdf" style="width: 70%" alt="Application to Part Discovery">
+						<img src="figs/feature.jpg" style="width: 70%" alt="Application to Part Discovery">
 						</div>
 
 
@@ -133,13 +133,13 @@
 						GPAT is not without limitations, and the figure below shows some typical failure cases. First, GPAT tends to give incorrect segmentation predictions if some parts are hidden inside a larger part (e.g., the light bulbs in a lamp) or the parts are less separable (e.g., overlapping parts of a microwave). To solve with these issues, it is possible to introduce additional information like colors and normals of the point clouds as inputs. 
 						Additionally, oriented bounding box can be insufficient as a pose estimation method for some parts. To tackle this problem, a learning-based pose estimation module can potentially replace the bounding box procedure.
 						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/failure.pdf" style="width: 70%" alt="Failure Modes">
+						<img src="figs/failure.jpg" style="width: 70%" alt="Failure Modes">
 						</div>
 
 						<!-- <hr/ style="margin-top: 1em">
 				        <h3>Algorithm Comparisons</h3>
 						<div style="text-align: center;">
-						<img src="figs/main.pdf" style="width: 100%" alt="Algorithm Comparisons">
+						<img src="figs/main.jpg" style="width: 100%" alt="Algorithm Comparisons">
 						</div> -->
 						
 						<!-- <hr/ style="margin-top: 1em">
@@ -148,25 +148,19 @@
 						<!-- <hr/ style="margin-top: 1em">
 				        <h3>Acknowledgements</h3>
 				        <p>
-						 The authors would like to thank Zhenjia Xu, Samir Gadre, Huy Ha, Chi Cheng, Xiaolong Li, Yifan You, and Boyuan Chen for their help throughout the project. We would also thank Google for their donation of UR5 robots. This work was supported in part by the National Science Foundation under CMMI-2037101 and Amazon Research Award. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.
+						
 						</p> -->
 
 						<!-- <hr/ style="margin-top: 1em">
                         <h3>Citation</h3>
                         To cite this work, please use the following BibTex entry,
                         <pre>
-                        <code>@inproceedings{yulong2022scene,
-  title={Scene Editing as Teleoperation: A Case Study in 6DoF Kit Assembly},
-  author={Li, Yulong, and Agrawal, Shubham, and Liu, Jen-Shuo, and Feiner, Steven, and Song, Shuran},
-  booktitle={2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  year={2022},
-  organization={IEEE}
-}
+                        
 </code>
 </pre> -->
 
 				        <!-- <p>If you have any questions, please feel free to contact 
-							<a href="http://www.columbia.edu/~yl4095/">Yulong Li</a>.</p> -->
+							-->
 						<hr/>
 			</div>
 

@@ -28,19 +28,21 @@
 		<!-- Main -->
 			<div id="main" style="padding-bottom:1em; padding-top: 5em; width: 60em; max-width: 70em; margin-left: auto; margin-right: auto;">
 					<section id="four">
+						
+						
 
 						<h1 style="text-align: center; margin-bottom: 0;"><font color="4e79a7">General Part Assembly Planning</font> </h1>
+
+						<div style="text-align: center; margin-top: 1em">
+							<img src="figs/teaser_new.pdf" style="width: 60%;" alt="header">
+						</div>
+
 						<!-- <h2 style="text-align: center; white-space: nowrap;">subtitle</h2> -->
 						Most successes in autonomous robotic assembly have been restricted to single target or category. We propose to investigate general part assembly, the ability to assemble novel target shape with unseen part shapes.
 						To tackle the planning of general part assembly, we present General Part Assembly Transformer (GPAT), a transformer-based model architecture that predicts part poses by inferring how each part corresponds to the target shape (represented by the segmentation).
 						Our experiments on both 3D CAD models and real-world scans demonstrate GPAT's generalization abilities to novel and diverse target and part shapes.
-						In the illustration below, GPAT predicts creative assemblies with novel target and part shapes, mostly unseen during training. 
 						By integrating with an assembly sequence and motion planning algorithm, we believe that GPAT has great potential in building vision-based general robotic assembly systems.
 						
-						<div style="text-align: center; margin-top: 1em">
-							<img src="figs/header.jpg" style="width: 70%;" alt="header">
-							<img src="figs/teaser.gif" style="width: 70%;" alt="teaser">
-						</div>
 
 						<!-- <div style="display: flex; justify-content: space-between;">
 							<img src="figs/table_animate.gif" style="width: 50%;" alt="teaser_table">
@@ -62,12 +64,12 @@
 						<hr/ style="margin-top: 1em">
 				        <h3>Paper & Code</h3> -->
 
-						<hr/ style="margin-top: 1em">
+						<!-- <hr/ style="margin-top: 1em">
 				        <h3>General Part Assembly Transformer (GPAT)</h3>
 						We tackle the problem of general part assembly by target segmentation followed with pose estimation. To predict accurate segmentation of the target, a key challenge is to deal with the ambiguities in the target shape due to geometrically equivalent parts (e.g., legs of a table). To infer accurate segmentations, we propose General Part Assembly Transformer (GPAT), a transformer-based model architecture, that processes input shapes in a fine-to-coarse manner, thereby ensuring consistent segmentation results. 
 						<div style="text-align: center; margin-top: 1em">
 						<img src="figs/method.pdf" style="max-width: 100%;" alt="General Part Assembly Transformer (GPAT)">
-						</div>
+						</div> -->
 
 						<hr/ style="margin-top: 1em">
 						<h3>Results</h3>
@@ -80,9 +82,9 @@
 						
 						<hr/ style="margin-top: 1em">
 						<h3>Results with Real-world Scans as Targets</h3>
-						Each row shows predictions given 3 sets of part shapes and the same real-world scan as the target shape.
+						We use the real-world scans from <a href="http://redwood-data.org">redwood</a> dataset as targets and part point clouds from the same category of <a hred="https://partnet.cs.stanford.edu">PartNet</a>. As seen in Fig 6, our method produces diverse assemblies that resemble the target given different parts. This result also illustrates how GPAT can be used to assemble different sets of parts given the same target shape.
 						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/realworld_all.pdf" style="width: 70%" alt="Results with Real-world Scans">
+						<img src="figs/realworld_all_new.pdf" style="width: 100%" alt="Results with Real-world Scans">
 						</div>
 
 
@@ -98,6 +100,22 @@
 						<div style="text-align: center;">
 						<img src="figs/opt.pdf" style="width: 100%" alt="The Effect of Optimization">
 						</div> -->
+						
+						<hr/ style="margin-top: 1em">
+						<h3>Creative Assemblies</h3>
+						o fully test the generalization abilities of GPAT, we provide unseen part shapes like a banana, hammers, and forks as parts to create novel targets such as a plane. Our model predicts creative assemblies given target shapes from unseen categories and non-exact parts, as seen in Fig. 1. 
+						<!-- The shapes are taken from PartNet, ModelNet40, and YCB dataset. -->
+						<div style="text-align: center; margin-top: 1em">
+							<img src="figs/header.jpg" style="width: 70%;" alt="header">
+							<img src="figs/teaser.gif" style="width: 70%;" alt="teaser">
+						</div>
+						
+						<hr/ style="margin-top: 1em">
+						<h3>Sensitivity to Scale</h3>
+						Part assembly often involves parts that have the same geometry but different scales, so it is necessary for a model to discriminate parts of different scales to create correct assemblies.  As an qualitative illustration in the figure below, we adjust the scale of the parts that have same geometry (the legs of chair/table), and the model correctly associates parts of different scales to the target to build the desired assemblies.
+						<div style="text-align: center; margin-top: 1em">
+						<img src="figs/scale.pdf" style="width: 70%" alt="Application to Part Discovery">
+						</div>
 
 						<hr/ style="margin-top: 1em">
 						<h3>Application to Part Discovery</h3>
@@ -109,12 +127,6 @@
 						<img src="figs/feature.pdf" style="width: 70%" alt="Application to Part Discovery">
 						</div>
 
-						<hr/ style="margin-top: 1em">
-						<h3>Sensitivity to Scale</h3>
-						Part assembly often involves parts that have the same geometry but different scales, so it is necessary for a model to discriminate parts of different scales to create correct assemblies.  As an qualitative illustration in the figure below, we adjust the scale of the parts that have same geometry (the legs of chair/table), and the model correctly associates parts of different scales to the target to build the desired assemblies.
-						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/scale.pdf" style="width: 70%" alt="Application to Part Discovery">
-						</div>
 
 						<hr/ style="margin-top: 1em">
 						<h3>Failure Modes</h3>

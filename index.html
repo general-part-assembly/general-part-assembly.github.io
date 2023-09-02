@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>General Part Assembly Transformer</title>
+		<title>General Part Assembly</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=1000">
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -31,15 +32,63 @@
 					<section id="four">
 						
 
-						<h1 style="text-align: center; margin-bottom: 0;"><font color="4e79a7">General Part Assembly Planning</font> </h1>
+						<h1 style="text-align: center; margin-bottom: 0.5em;"><font color="4e79a7">Rearrangement Planning for General Part Assembly</font> </h1>
+						
+						<h3 style="text-align: center; margin-bottom: -1em;">
+							<a href="https://yulongli42.github.io/">Yulong Li<sup>1</sup></a> &nbsp&nbsp&nbsp&nbsp <a href="https://andyzeng.github.io/">Andy Zeng<sup>2</sup></a> &nbsp&nbsp&nbsp&nbsp <a href="https://shurans.github.io/">Shuran Song<sup>1</sup></a> <br>
+							<p style="margin-top:0.5em"> <sup>1</sup>Columbia University &nbsp&nbsp&nbsp&nbsp <sup>2</sup>Google Deepmind </p>
+						</h3>
+
+						<div style="text-align:center; margin-bottom: 1em;">
+							<div>
+							  <!-- PDF Link. -->
+							  <span>
+								<a href="https://arxiv.org/pdf/2307.00206.pdf" class="button">
+								  <span class="icon">
+									<i class="fa fa-file-pdf-o"></i>
+								  </span>
+								  <span>Paper</span>
+								</a>
+							  </span>
+							  <span>
+								<a href="https://arxiv.org/abs/2307.00206" class="button">
+								  <span class="icon">
+									<i class="ai ai-arxiv"></i>
+								  </span>
+								  <span>arXiv</span>
+								</a>
+							  </span>
+							  <!-- Video Link. -->
+							  <!-- <span>
+								<a href="https://youtu.be/Proiua4NNTk" class="button">
+								  <span class="icon">
+									<i class="fa fa-youtube-play"></i>
+								  </span>
+								  <span>Video</span>
+								</a>
+							  </span> -->
+							  <!-- Code Link. -->
+							  <span>
+								<a href="https://github.com/columbia-ai-robotics/gpat/" class="button">
+								  <span class="icon">
+									<i class="fa fa-github"></i>
+								  </span>
+								  <span>Code</span>
+								</a>
+							  </span>
+							  <!-- Dataset Link. -->
+			  
+							</div>
+						</div>
 
 						<div style="text-align: center; margin-top: 1em">
 							<img src="figs/teaser_new.jpg" style="width: 60%;" alt="teaser">
 						</div>
 
 						<!-- <h2 style="text-align: center; white-space: nowrap;">subtitle</h2> -->
-						Most successes in autonomous robotic assembly have been restricted to single target or category. We propose to investigate general part assembly, the ability to assemble novel target assemblies with unseen part shapes.
-						To tackle the planning of general part assembly, we present General Part Assembly Transformer (GPAT), a transformer-based model architecture that predicts part poses by inferring how each part corresponds to the target shape (represented by the segmentation).
+
+						Most successes in autonomous robotic assembly have been restricted to single target or category. We propose to investigate general part assembly, the ability to assemble novel target assemblies with unseen part shapes. As a fundamental step to a general part assembly system, we tackle the task of determining the precise poses of the parts in the target assembly, which we we term "rearrangement planning".
+						We present General Part Assembly Transformer (GPAT), a transformer-based model architecture that predicts part poses by inferring how each part corresponds to the target shape (represented by the segmentation).
 						Our experiments on both 3D CAD models and real-world scans demonstrate GPAT's generalization abilities to novel and diverse target and part shapes.
 						By integrating with an assembly sequence and motion planning algorithm, we believe that GPAT has great potential in building vision-based general robotic assembly systems.
 						
@@ -54,8 +103,8 @@
 						
 						<hr/ style="margin-top: 1em">
 						<h3>Technical Summary Video (with Audio)</h3>
-						<div style="text-align: center; margin-top: 1em">
-						<video width="640" height="480" controls>
+						<div style="text-align: center; margin-top: 0em">
+						<video width="800" controls>
 						<source src="figs/video.mp4" type="video/mp4">
 						Your browser does not support the video tag.
 						</video>
@@ -64,16 +113,16 @@
 						<hr/ style="margin-top: 1em">
 				        <h3>Paper & Code</h3> -->
 
-						<!-- <hr/ style="margin-top: 1em">
+						<hr/ style="margin-top: 1em">
 				        <h3>General Part Assembly Transformer (GPAT)</h3>
-						We tackle the problem of general part assembly by target segmentation followed with pose estimation. To predict accurate segmentation of the target, a key challenge is to deal with the ambiguities in the target shape due to geometrically equivalent parts (e.g., legs of a table). To infer accurate segmentations, we propose General Part Assembly Transformer (GPAT), a transformer-based model architecture, that processes input shapes in a fine-to-coarse manner, thereby ensuring consistent segmentation results. 
+						We tackle the problem with target segmentation followed by pose estimation. To predict accurate segmentation of the target, a key challenge is to deal with the ambiguities in the target shape due to geometrically equivalent parts (e.g., legs of a table). To infer accurate segmentations, we propose General Part Assembly Transformer (GPAT), a transformer-based model architecture, that processes input shapes in a fine-to-coarse manner, thereby ensuring consistent segmentation results. 
 						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/method.jpg" style="max-width: 100%;" alt="method">
-						</div> -->
+						<img src="figs/method.jpg" style="max-width: 50%;" alt="method">
+						</div>
 
 						<hr/ style="margin-top: 1em">
 						<h3>Results</h3>
-						For each test sample, our model takes as inputs a target shape and variable set of part shapes. The target shape may be given at either a caonical pose or a random pose, and part shapes may be exact or non-exact match. Chairs, lamps, and faucets are seen during the training, while tables and displays are unseen categories. The first row of each category displays targets in black, and the second row shows the model predictions.
+						For each test sample, our model takes as inputs a target shape and variable set of part shapes. The target shape may be given at either a caonical pose or a random pose, and part shapes may be exact or non-exact match. Chairs, lamps, and faucets are seen during the training, while tables and displays are <b>unseen categories</b>. The first row of each category displays targets in black, and the second row shows the model predictions.
 
 						
 						<div style="text-align: center; margin-top: 1em">
@@ -86,20 +135,6 @@
 						<div style="text-align: center; margin-top: 1em">
 						<img src="figs/realworld_all_new.jpg" style="width: 100%" alt="Results with Real-world Scans">
 						</div>
-
-
-						<!-- <hr/ style="margin-top: 1em">
-						<h3>Multi-scale Attention Layer</h3>
-						TF denotes an alternative segmentation-based model that uses the vanilla transformer, which fails to produce consistent segmentations for targets with geometrically equivalent parts. With the multi-scale attention layer, GPAT fully leverages the spatial structure of the target point clouds to produce consistent segmentations and accurate assemblies.
-						<div style="text-align: center; margin-top: 1em">
-						<img src="figs/seg.jpg" style="width: 70%" alt="Results with Real-world Scans">
-						</div> -->
-
-						<!-- <hr/ style="margin-top: 1em">
-						<h3>The Effect of Optimization</h3>
-						<div style="text-align: center;">
-						<img src="figs/opt.jpg" style="width: 100%" alt="The Effect of Optimization">
-						</div> -->
 						
 						<hr/ style="margin-top: 1em">
 						<h3>Creative Assemblies</h3>
@@ -108,6 +143,20 @@
 						<div style="text-align: center; margin-top: 1em">
 							<img src="figs/teaser_head.jpg" style="width: 70%;" alt="teaser_head">
 							<img src="figs/teaser.gif" style="width: 70%;" alt="teaser">
+						</div>
+						
+						<hr/ style="margin-top: 1em">
+						<h3>Multi-scale Attention Layer</h3>
+						TF denotes an alternative segmentation-based model that uses the vanilla transformer, which fails to produce consistent segmentations for targets with geometrically equivalent parts. With the multi-scale attention layer, GPAT fully leverages the spatial structure of the target point clouds to produce consistent segmentations and accurate assemblies.
+						<div style="text-align: center; margin-top: 1em">
+						<img src="figs/seg.jpg" style="width: 70%" alt="Results with Real-world Scans">
+						</div>
+
+						<hr/ style="margin-top: 1em">
+						<h3>Optimization is Prone to Local Minima.</h3>
+						As seen in the figure below, directly optimizing the part poses to match the target often result in predictions at local minima where the predicted assembly matches the contour of the target, but the assembly makes no semantic sense.
+						<div style="text-align: center;">
+						<img src="figs/opt.jpg" style="width: 70%" alt="The Effect of Optimization">
 						</div>
 						
 						<hr/ style="margin-top: 1em">
@@ -140,24 +189,26 @@
 				        <h3>Algorithm Comparisons</h3>
 						<div style="text-align: center;">
 						<img src="figs/main.jpg" style="width: 100%" alt="Algorithm Comparisons">
-						</div> -->
+						</div>
+						 -->
 						
-						<!-- <hr/ style="margin-top: 1em">
-				        <h3>Team</h3> -->
-						
-						<!-- <hr/ style="margin-top: 1em">
+						<hr/ style="margin-top: 1em">
 				        <h3>Acknowledgements</h3>
 				        <p>
-						
-						</p> -->
+						We would like to thank Huy Ha, Zhenjia Xu, Cheng Chi, and Zeyi Liu for their helpful feedback and fruitful discussions. This work was supported in part by NSF Award #2037101, #2143601, and #2132519. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies, either expressed or implied, of the sponsors.
+						</p>
 
-						<!-- <hr/ style="margin-top: 1em">
+						<hr/ style="margin-top: 1em">
                         <h3>Citation</h3>
                         To cite this work, please use the following BibTex entry,
-                        <pre>
-                        
-</code>
-</pre> -->
+                        <pre><code>@inproceedings{li2023rearrangement,
+	title={Rearrangement Planning for General Part Assembly},
+	author={Li, Yulong and Zeng, Andy and Song, Shuran},
+	booktitle={Conference on Robot Learning},
+	year={2023},
+	organization={PMLR}
+}</code>
+</pre>
 
 				        <!-- <p>If you have any questions, please feel free to contact 
 							-->
